@@ -36,6 +36,12 @@ a{
     text-align: center;
     list-style: none;
 }
+.members-list li a{
+    color: #b31a1a;
+}
+.members-list li a:hover{
+    color: #02bb2d;
+}
 .name-title{
     text-align:center;
     color: #842a2a;
@@ -61,7 +67,7 @@ a{
     text-align:right;
 }
 .nav-options a{
-    color:#ff0;
+    color:#3a0e88;
 }
 .nav-options li{
     display:inline;
