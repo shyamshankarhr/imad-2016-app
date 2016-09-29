@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var content = {
+var content ={
     shyam:{
     title: "Shyam Shankar H R",
     heading: "Shyam Shankar H R",
