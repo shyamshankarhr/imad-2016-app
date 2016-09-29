@@ -6,43 +6,43 @@ var app = express();
 app.use(morgan('combined'));
 
 var content = {
-    shyamContent:{
+    shyam:{
     title: "Shyam Shankar H R",
     heading: "Shyam Shankar H R",
     img: "ui/shyam.jpg",
     content:"Koottathil ettavum look.. Verum kidilam. Mwunthaanu.",
-    };
-    ferozContent:{
+    },
+    feroz:{
     title: "Feroz Baker",
     heading: "Feroz Baker",
     img: "ui/feroz.jpg",
     content:"Die-hard GOT fan. Prefers 9-gag over FB, foreign universities over Indian, gay porn over straight. Has a ridiculously immense vocabulary.",
-    };
-    gautamContent:{
+    },
+    gautam:{
     title: "Gautam Sreekumar",
     heading: "Gautam Sreekumar",
     img: "ui/gautam.jpg",
     content:"Always trying out new ways to get friendzoned.. Ale*** enna vaakku mindiyaal deshyam varum. Mudangathe thundu kaanarundenkilum valya daiva vishwasiyaa ;P",
-    };
-    nageshContent:{
+    },
+    nagesh:{
     title: "Nagesh A P",
     heading: "Nagesh A P",
     img: "ui/nagesh.jpg",
     content:"Extremely talented in hiding gf's info from friends. Gay aanenkilum lesbian thundaan kaanan ishtam. Raaftarinte engine aaya Nagannan mwuthaanu.",
-    };
-    aravindContent:{
+    },
+    aravind:{
     title: "Aravind Shaj",
     heading: "Aravind Shaj",
     img: "ui/aravind.jpg",
     content:"Girlsine valakkan best.. Pioneer of MATHIIT's thundan-revolution. ID course onnukoodi padikkana thaalparyam.",
-    };
-    barjunContent:{
+    },
+    barjun:{
     title: "B Arjun",
     heading: "B Arjun",
     img: "ui/barjun.jpg",
     content:"The Kerala-topper. The CS buji.. BARjun. Annum innum ennum gf aayit CP yund. Barjun athil thripthanaanu.",
-    };
-}
+    }
+};
 
 function createTemplate(data){
     
@@ -85,23 +85,9 @@ function createTemplate(data){
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/shyam', function (req, res) {
-  res.send(createTemplate(shyamContent));
-});
-app.get('/aravind', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'aravind.html'));
-});
-app.get('/barjun', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'barjun.html'));
-});
-app.get('/nagesh', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'nagesh.html'));
-});
-app.get('/feroz', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'feroz.html'));
-});
-app.get('/gautam', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'gautam.html'));
+app.get('/:memberName', function (req, res) {
+  var memberName = req.params.memberName;
+  res.send(createTemplate(content[memberName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
