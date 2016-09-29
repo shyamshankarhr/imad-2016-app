@@ -5,12 +5,44 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var shyamContent = {
+var content = {
+    shyamContent:{
     title: "Shyam Shankar H R",
     heading: "Shyam Shankar H R",
     img: "ui/shyam.jpg",
     content:"Koottathil ettavum look.. Verum kidilam. Mwunthaanu.",
-};
+    };
+    ferozContent:{
+    title: "Feroz Baker",
+    heading: "Feroz Baker",
+    img: "ui/feroz.jpg",
+    content:"Die-hard GOT fan. Prefers 9-gag over FB, foreign universities over Indian, gay porn over straight. Has a ridiculously immense vocabulary.",
+    };
+    gautamContent:{
+    title: "Gautam Sreekumar",
+    heading: "Gautam Sreekumar",
+    img: "ui/gautam.jpg",
+    content:"Always trying out new ways to get friendzoned.. Ale*** enna vaakku mindiyaal deshyam varum. Mudangathe thundu kaanarundenkilum valya daiva vishwasiyaa ;P",
+    };
+    nageshContent:{
+    title: "Nagesh A P",
+    heading: "Nagesh A P",
+    img: "ui/nagesh.jpg",
+    content:"Extremely talented in hiding gf's info from friends. Gay aanenkilum lesbian thundaan kaanan ishtam. Raaftarinte engine aaya Nagannan mwuthaanu.",
+    };
+    aravindContent:{
+    title: "Aravind Shaj",
+    heading: "Aravind Shaj",
+    img: "ui/aravind.jpg",
+    content:"Girlsine valakkan best.. Pioneer of MATHIIT's thundan-revolution. ID course onnukoodi padikkana thaalparyam.",
+    };
+    barjunContent:{
+    title: "B Arjun",
+    heading: "B Arjun",
+    img: "ui/barjun.jpg",
+    content:"The Kerala-topper. The CS buji.. BARjun. Annum innum ennum gf aayit CP yund. Barjun athil thripthanaanu.",
+    };
+}
 
 function createTemplate(data){
     
